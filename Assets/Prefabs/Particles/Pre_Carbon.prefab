@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50246476427322648}
   - component: {fileID: 114130341360408224}
   m_Layer: 0
-  m_Name: Pre-Carbon
+  m_Name: Pre_Carbon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
