@@ -194,6 +194,10 @@ Prefab:
       propertyPath: orthographic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1733606058345060, guid: 9df88f43859feef46bfba0093cf87bce, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9df88f43859feef46bfba0093cf87bce, type: 2}
   m_IsPrefabParent: 0
@@ -287,11 +291,6 @@ Prefab:
     - target: {fileID: 4562085735322508, guid: d2ec46a0c6a4bc943ba076f68fe9689a, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114322920759967976, guid: d2ec46a0c6a4bc943ba076f68fe9689a,
-        type: 2}
-      propertyPath: RotationSpeed
-      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2ec46a0c6a4bc943ba076f68fe9689a, type: 2}
