@@ -37,6 +37,7 @@ public class Scr_ParticleSensing : MonoBehaviour
     {
         // Sense all nearby particles
         var particles = FindObjectsOfType<Scr_ParticleSensing>();
+        bool isUranium = tag == "Uranium";
 
         // Only look for later ones
         int i;
@@ -47,11 +48,16 @@ public class Scr_ParticleSensing : MonoBehaviour
             {
                 foundSelf = true;
             }
-            else if (foundSelf)
+            else if (foundSelf || isUranium)
             {
                 var other = particles[i].gameObject;
-                if ((other.transform.position - this.transform.position).magnitude <= SpringDistance)
+                float distance = (other.transform.position - this.transform.position).magnitude;
+                if (distance <= SpringDistance)
                 {
+                    if (isUranium)
+                    {
+                        Debug.Log(i + " Uranium near " + other.name);
+                    }
                     AttachSpringTo(other);
                 }
             }
@@ -85,7 +91,11 @@ public class Scr_ParticleSensing : MonoBehaviour
     public void AttachSpringTo(GameObject other)
     {
         // Not if it's already connected
-        if (!IsConnected(other))
+        if (IsConnected(other))
+        {
+            Debug.Log("Already connected to " + other.name);
+        }
+        else
         {
             // Create the spring
             SpringJoint2D springJoint = gameObject.AddComponent<SpringJoint2D>();
@@ -97,7 +107,10 @@ public class Scr_ParticleSensing : MonoBehaviour
 
             // Line Renderer
             var lineRenderer = gameObject.AddComponent<LineRenderer>();
-            lineRenderer.endWidth = lineRenderer.startWidth = .05f;
+            if (lineRenderer != null)
+            {
+                lineRenderer.endWidth = lineRenderer.startWidth = .05f;
+            }
 
             // Add to the list of connections
             this.Connections.Add(new ParticleConnection
