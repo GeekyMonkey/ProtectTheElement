@@ -108,27 +108,6 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &360112068 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1219111350146052, guid: 172df1118d3b0f1428bac1bbafd7e6ae,
-    type: 2}
-  m_PrefabInternal: {fileID: 389880972}
---- !u!114 &360112069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 360112068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0947314743d2cd4d99800e919a8d81d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartQty: 4
-  SecondsBetween: 1
-  Range: {x: 5, y: 4}
-  CarbonPrefab: {fileID: 1010661051926038, guid: b555c0fcd490d77488271f2340de8826,
-    type: 2}
 --- !u!1001 &389880972
 Prefab:
   m_ObjectHideFlags: 0
@@ -308,6 +287,11 @@ Prefab:
     - target: {fileID: 4562085735322508, guid: d2ec46a0c6a4bc943ba076f68fe9689a, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114322920759967976, guid: d2ec46a0c6a4bc943ba076f68fe9689a,
+        type: 2}
+      propertyPath: RotationSpeed
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d2ec46a0c6a4bc943ba076f68fe9689a, type: 2}

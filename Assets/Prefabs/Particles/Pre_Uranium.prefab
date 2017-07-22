@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 58453330863655784}
   - component: {fileID: 50159112814275974}
   - component: {fileID: 114322920759967976}
+  - component: {fileID: 114338528977531040}
   m_Layer: 0
   m_Name: Pre_Uranium
-  m_TagString: Untagged
+  m_TagString: Uranium
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,4 +130,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3721c747d54876648a73db3443e6663d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationSpeed: 0.5
+  RotationSpeed: 15
+--- !u!114 &114338528977531040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1812903419064188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a112f47ab534a774ebe3df60d09b13f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpringDistance: 2.5
+  Damping: 0.3

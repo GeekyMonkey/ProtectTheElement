@@ -3,10 +3,12 @@
 public class Scr_CarbonEmitter : MonoBehaviour
 {
     public int StartQty = 4;
+    public int MaxQty = 15;
     public float SecondsBetween = 1;
     public Vector2 Range = new Vector2(5, 4);
     public GameObject CarbonPrefab;
 
+    private float Qty;
     private float Reload;
 
     // Use this for initialization
@@ -20,8 +22,12 @@ public class Scr_CarbonEmitter : MonoBehaviour
 
     void Emit()
     {
-        var newCarbon = GameObject.Instantiate(CarbonPrefab);
-        newCarbon.transform.position = new Vector3(UnityEngine.Random.Range(-Range.x, Range.x), UnityEngine.Random.Range(-Range.y, Range.y), newCarbon.transform.position.z);
+        Qty++;
+        if (Qty < MaxQty)
+        {
+            var newCarbon = GameObject.Instantiate(CarbonPrefab);
+            newCarbon.transform.position = new Vector3(UnityEngine.Random.Range(-Range.x, Range.x), UnityEngine.Random.Range(-Range.y, Range.y), newCarbon.transform.position.z);
+        }
     }
 
     // Update is called once per frame
