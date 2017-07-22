@@ -20,7 +20,17 @@ public class Scr_ParticleSensing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // update lines
+        foreach (var connection in Connections)
+        {
+            Vector3[] positions = new Vector3[2];
+            positions[0] = this.transform.position;
+            positions[1] = connection.OtherGameObject.transform.position;
+            if (connection.LineRenderer != null)
+            {
+                connection.LineRenderer.SetPositions(positions);
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -85,8 +95,17 @@ public class Scr_ParticleSensing : MonoBehaviour
             springJoint.anchor = new Vector2(transform.localScale.x / 2, 0);
             springJoint.connectedAnchor = new Vector2(other.transform.localScale.x / 2, 0); ;
 
+            // Line Renderer
+            var lineRenderer = gameObject.AddComponent<LineRenderer>();
+            lineRenderer.endWidth = lineRenderer.startWidth = .05f;
+
             // Add to the list of connections
-            this.Connections.Add(new ParticleConnection { OtherGameObject = other, Spring = springJoint });
+            this.Connections.Add(new ParticleConnection
+            {
+                OtherGameObject = other,
+                Spring = springJoint,
+                LineRenderer = lineRenderer
+            });
 
             // Once connected with the uranium, remove wind
             //if (this.tag == "Uranium")
