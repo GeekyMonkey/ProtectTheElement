@@ -130,4 +130,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WindDirection: {x: -0.1, y: -0.02}
-  WindSpeed: 0.8
+  WindSpeed: 2

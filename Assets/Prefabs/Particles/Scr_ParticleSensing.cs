@@ -56,7 +56,7 @@ public class Scr_ParticleSensing : MonoBehaviour
                 {
                     if (isUranium)
                     {
-                        Debug.Log(i + " Uranium near " + other.name);
+                        //Debug.Log(i + " Uranium near " + other.name);
                     }
                     AttachSpringTo(other);
                 }
@@ -93,7 +93,7 @@ public class Scr_ParticleSensing : MonoBehaviour
         // Not if it's already connected
         if (IsConnected(other))
         {
-            Debug.Log("Already connected to " + other.name);
+            //Debug.Log("Already connected to " + other.name);
         }
         else
         {

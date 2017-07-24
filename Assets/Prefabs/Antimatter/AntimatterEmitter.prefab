@@ -51,9 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0947314743d2cd4d99800e919a8d81d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartQty: 4
-  MaxQty: 15
+  StartQty: 1
+  MaxQty: 99
   SecondsBetween: 1
-  Range: {x: 5, y: 4}
+  Range: {x: 0, y: 4}
   CarbonPrefab: {fileID: 1010661051926038, guid: b555c0fcd490d77488271f2340de8826,
     type: 2}
